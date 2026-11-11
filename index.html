@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- TODO 0: Agregar Bootstrap 5.3 (CSS y JS bundle) -->
+  <!-- Búscalo en: https://getbootstrap.com/docs/5.3/getting-started/introduction/ -->
+  <!-- Pregunta: ¿por qué el JS necesita la versión "bundle"? ¿Qué componentes dejarían de funcionar sin él? -->
+
+</head>
+
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <!-- ============================================================ -->
+  <!-- TODO 1: BARRA DE NAVEGACIÓN                                  -->
+  <!-- ============================================================ -->
+  <!-- Requisitos:
+         - Nombre o logo del portafolio a la izquierda.
+         - Enlaces a las secciones de esta página: Inicio, Sobre mí, Habilidades,
+           Proyectos, Experiencia y Contacto (usa anclas: href="#proyectos", etc.).
+         - En pantallas pequeñas los enlaces deben ocultarse detrás de un botón
+           "hamburguesa" que despliega el menú.
+                   - La barra debe permanecer visible al hacer scroll.
+         Documentación: Components > Navbar  |  Helpers > Position
+    -->
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#SEPHIROTTHO">SEPHIROTTHO</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#INICIO">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#SOBREMI">SOBRE MÍ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#SKILLS">HABILIDADES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#PROYECTOS">PROYECTOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#EXP">EXPERIENCIA</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#CONTACTO" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              CONTACTO
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#YT">YOUTUBE:</a></li>
+              <li><a class="dropdown-item" href="#INST">INSTAGRAM:</a></li>
+              <li><a class="dropdown-item" href="#TIKTOK">TIKTOK:</a></li>
+              <li><a class="dropdown-item" href="#TWT">TWITTER (X):</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#MAIL">CORREO:</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="..." aria-label="Search" />
+          <button class="btn btn-outline-success" type="submit">BUSCAR</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================ -->
+  <!-- TODO 2: HERO / PORTADA (id="inicio")                         -->
+  <!-- ============================================================ -->
+  <!-- Requisitos:
+         - Tu nombre como encabezado grande y llamativo.
+         - Una frase corta que diga quién eres o a qué te dedicas.
+         - Dos botones: uno principal ("Ver proyectos") y uno secundario
+           con estilo de contorno ("Contáctame").
+         - Todo el contenido centrado horizontal y verticalmente.
+         Documentación: Content > Typography (display, lead)  |  Components > Buttons
+                        Utilities > Flex  |  Utilities > Spacing  |  Utilities > Text
+    -->
+
+  <section id="INICIO" class="bg-white">
+    <div class="d-flex justify-content-center">
+      <h1 class="display-1"> HOLA :3! SOY SEPH</h1>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <p class="lead">
+        Soy un creativ digital que hace todo tipo de proyectos, desde animaciones hasta videojuegos :3
+      </p>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <button type="button" class="btn btn-dark">VER PROYECTOS</button>
+      <button type="button" class="btn btn-outline-dark">CONTÁCTAME :3</button>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TODO 3: SOBRE MÍ (id="sobre-mi")                             -->
+  <!-- ============================================================ -->
+  <!-- Requisitos:
+         - Dos columnas en escritorio: una con tu foto y otra con tu descripción.
+         - En celular las columnas deben apilarse (una debajo de la otra).
+         - La foto debe ser responsiva y con bordes redondeados o circular.
+         - Un botón para "Descargar CV".
+         Documentación: Layout > Grid  |  Layout > Breakpoints
+                        Content > Images  |  Utilities > Borders
+    -->
+
+
+  <section id="SOBREMI" class="bg-white">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <img src="HQCEI7OWQAASGUW.jpg" class="img-fluid rounded-circle" alt="SEPH">
+        </div>
+        <div class="col align-content-center">
+          <h2 class="display-5"> Sobre mí: </h2>
+          <p class="lead"> Soy estudiante de la carrera de Creatividad Digital. Me interesan las distintas formas del
+            arte
+            como el dibujo digital, la música, los videojuegos, entre otros. </p>
+          <button class="btn btn-primary" type="submit">Descargar CV</button>
+        </div>
+      </div>
+  </section>
+
+
+
+  <!-- ============================================================ -->
+  <!-- TODO 4: HABILIDADES (id="habilidades")                       -->
+  <!-- ============================================================ -->
+  <!-- Requisitos:
+         - Muestra al menos 4 habilidades (ej. HTML, CSS, JavaScript, Bootstrap).
+         - Cada habilidad debe indicar tu nivel de dominio de forma visual
+           (una barra que se llena según el porcentaje).
+         - Opcional: etiquetas pequeñas con herramientas que usas (Git, VS Code, Figma...).
+         Documentación: Components > Progress  |  Components > Badge
+    -->
+
+
+  <section id="SKILLS" class="bg-white">
+    <div class="container">
+
+      <h2 class="display-5 text-center section-title">
+        Habilidades
+      </h2>
+
+      <div class="row g-4">
+
+        <div class="col-12 col-md-6">
+          <div class="d-flex justify-content-between mb-2">
+            <span class="skill-label">Modelado 3D</span>
+            <span>50%</span>
+          </div>
+
+          <div class="progress" role="progressbar" aria-label="HTML" aria-valuenow="75" aria-valuemin="0"
+            aria-valuemax="100">
+            <div class="progress-bar bg-primary" style="width: 50%">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="d-flex justify-content-between mb-2">
+            <span class="skill-label">Dibujo Digital y Animación</span>
+            <span>75%</span>
+          </div>
+
+          <div class="progress" role="progressbar" aria-label="CSS" aria-valuenow="65" aria-valuemin="0"
+            aria-valuemax="100">
+            <div class="progress-bar bg-info" style="width: 75%">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="d-flex justify-content-between mb-2">
+            <span class="skill-label">Desarrollo de Videojuegos</span>
+            <span>40%</span>
+          </div>
+
+          <div class="progress" role="progressbar" aria-label="JavaScript" aria-valuenow="40" aria-valuemin="0"
+            aria-valuemax="100">
+            <div class="progress-bar bg-warning text-dark" style="width: 40%">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="d-flex justify-content-between mb-2">
+            <span class="skill-label">Diseño Sonoro/Actuación de voz</span>
+            <span>70%</span>
+          </div>
+
+          <div class="progress" role="progressbar" aria-label="Bootstrap" aria-valuenow="60" aria-valuemin="0"
+            aria-valuemax="100">
+            <div class="progress-bar bg-success" style="width: 70%">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-4">
+        <span class="badge text-bg-secondary me-1">Blender</span>
+        <span class="badge text-bg-secondary me-1">Krita</span>
+        <span class="badge text-bg-secondary me-1">Unreal Engine</span>
+        <span class="badge text-bg-secondary me-1">Roblox Studio</span>
+        <span class="badge text-bg-secondary me-1">VS Code</span>
+        <span class="badge text-bg-secondary me-1">Audacity</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <!-- TODO 5: PROYECTOS (id="proyectos")                           -->
+  <!-- ============================================================ -->
+  <!-- Requisitos:
+         - Al menos 3 proyectos.
+         - Cada proyecto en una "tarjeta" con: imagen, título, descripción breve,
+           tecnologías usadas y un botón/enlace para ver el proyecto.
+         - Las tarjetas deben acomodarse: 1 por fila en celular, 2 en tablet, 3 en escritorio.
+         - Todas las tarjetas deben tener la misma altura.
+         Documentación: Components > Card  |  Layout > Grid (row-cols)
+                        Utilities > Sizing
+    -->
+
+
+  <section id="PROYECTOS">
+    <div class="container">
+
+      <h2 class="display-5 text-center section-title">
+        Mis proyectos :3
+      </h2>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+
+        <div class="col">
+          <article class="card project-card shadow-sm">
+
+            <img src="170 sin título_20250430221831.jpg" class="card-img-top" alt="Urbania Residents Alan Emputao">
+
+            <div class="card-body">
+
+              <h3 class="card-title h5">
+                URBANIA RESIDENTS: Episodio Piloto
+              </h3>
+
+              <p class="card-text">
+                Video musical animatic de la serie en desarrollo "Urbania Residents"
+              </p>
+
+              <div class="mb-3">
+                <span class="badge text-bg-primary">IbisPaintX</span>
+                <span class="badge text-bg-secondary">Ilustración</span>
+                <span class="badge text-bg-secondary">Animatic</span>
+                <span class="badge text-bg-secondary">Edición de Video</span>
+              </div>
+
+              <button class="btn btn-outline-dark" type="button" data-bs-toggle="modal"
+                data-bs-target="#modalProyecto1">
+                Ver más...
+              </button>
+
+            </div>
+          </article>
+        </div>
+
+
+        <!-- PROYECTO 2 -->
+        <div class="col">
+          <article class="card project-card shadow-sm">
+
+            <img src="Captura de pantalla 2026-11-10 201544.png" class="card-img-top" alt="SILICON_LIFE">
+
+            <div class="card-body">
+
+              <h3 class="card-title h5">
+                Comercial animado en Unreal Engine
+              </h3>
+
+              <p class="card-text">
+                Un comercial centrado en las texturas, luces y animación de un endoesqueleto. El proyecto fue creado
+                enteramenre en Unreal Engine.
+              </p>
+
+              <div class="mb-3">
+                <span class="badge text-bg-primary">Unreal Engine</span>
+                <span class="badge text-bg-secondary">3D</span>
+                <span class="badge text-bg-secondary">Animación</span>
+                <span class="badge text-bg-secondary">Edición de video</span>
+              </div>
+
+              <a class="btn btn-outline-dark" href="#contacto">
+                Ver más...
+              </a>
+
+            </div>
+          </article>
+        </div>
+
+
+        <!-- PROYECTO 3 -->
+        <div class="col">
+          <article class="card project-card shadow-sm">
+
+            <img src="Captura de pantalla 2026-11-10 202625.png" class="card-img-top" alt="Sylveon 3D :3">
+
+            <div class="card-body">
+
+              <h3 class="card-title h5">
+                Modelo 3D de Sylveon
+              </h3>
+
+              <p class="card-text">
+                Modelado 3D en Blender del Pokémon Sylveon, incluyendo rigging y texturizado.
+              </p>
+
+              <div class="mb-3">
+                <span class="badge text-bg-primary">Blender</span>
+                <span class="badge text-bg-secondary">3D</span>
+              </div>
+
+              <a class="btn btn-outline-dark" href="#contacto">
+                Ver más...
+              </a>
+
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TODO 6: DETALLE DE PROYECTO (ventana emergente)              -->
+  <!-- ============================================================ -->
+  <!-- Requisitos:
+         - Al dar clic en "Ver más" de al menos un proyecto, debe abrirse una
+           ventana emergente sobre la página con más información del proyecto.
+         - La ventana debe tener título, contenido y botón para cerrar.
+         Documentación: Components > Modal
+    -->
+
+
+  <div class="modal fade" id="modalProyecto1" tabindex="-1" aria-labelledby="modalProyecto1Label" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header">
+
+          <h2 class="modal-title fs-5" id="modalProyecto1Label">
+            URBANIA RESIDENTS: Episodio Piloto
+          </h2>
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar">
+          </button>
+
+        </div>
+
+        <div class="modal-body">
+          Este proyecto fue realizado en conjunto con Beatriz Elizabeth Muñoz Arellano, Co-Creadore de URBANIA
+          RESIDENTS. El proyecto da una vista inicial a la vida de los habitantes del edificio departamental URBANIA,
+          mientras suena "Soft" de la banda Motionless in White.
+
+          <hr>
+
+          <strong>Herramientas:</strong> IbisPaintX, celular móvil y CapCut.
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Cerrar
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================================================ -->
+  <!-- TODO 7: EXPERIENCIA / FORMACIÓN (id="experiencia")           -->
+  <!-- ============================================================ -->
+  <!-- Requisitos:
+         - Lista de tu formación académica, cursos o experiencia laboral.
+         - Cada elemento debe poder expandirse/contraerse para mostrar el detalle,
+           y solo uno debe estar abierto a la vez.
+         Documentación: Components > Accordion  (alternativa: Components > List group)
+    -->
+
+
+  <section id="EXP" class="bg-white">
+    <div class="container">
+
+      <h2 class="display-5 text-center section-title">
+        Experiencia y formación
+      </h2>
+
+      <div class="accordion mx-auto" id="acordeonExperiencia" style="max-width: 850px;">
+
+
+        <div class="accordion-item">
+
+          <h3 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#formacion1"
+              aria-expanded="true" aria-controls="formacion1">
+              Formación académica
+            </button>
+          </h3>
+
+          <div id="formacion1" class="accordion-collapse collapse show" data-bs-parent="#acordeonExperiencia">
+
+            <div class="accordion-body">
+              Estudiante de la carrera de
+              <strong>Creatividad Digital</strong>.
+
+              <p class="mb-0 text-secondary">
+                Universidad de Guadalajara, CUGDL del periodo 2024B - 2027A.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="accordion-item">
+
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#formacion2" aria-expanded="false" aria-controls="formacion2">
+              Cursos y aprendizaje independiente
+            </button>
+          </h3>
+
+          <div id="formacion2" class="accordion-collapse collapse" data-bs-parent="#acordeonExperiencia">
+
+            <div class="accordion-body">
+              Aprendizaje y práctica en ilustración digital,
+              modelado 3D, animación y narrativa.
+
+              <p class="mb-0 text-secondary">
+                Completé un curso de Escritura Creativa, varios cursos de modelado de Blender que incluían modelado y
+                animación, al igual que cursos de pintura digital.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- ELEMENTO 3 -->
+        <div class="accordion-item">
+
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#formacion3" aria-expanded="false" aria-controls="formacion3">
+              Experiencia y proyectos personales
+            </button>
+          </h3>
+
+          <div id="formacion3" class="accordion-collapse collapse" data-bs-parent="#acordeonExperiencia">
+
+            <div class="accordion-body">
+              Desarrollo de proyectos creativos y académicos
+              en distintas áreas digitales.
+
+              <p class="mb-0 text-secondary">
+                He colaborado en la serie de cómic "URBANIA RESIDENTS" como co-creadora, al igual que he prestado mi voz
+                para distintos proyectos como "El Monólogo de Mateo" y un videoclip musical.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <!-- TODO 8: CONTACTO (id="contacto")                             -->
+  <!-- ============================================================ -->
+  <!-- Requisitos:
+         - Formulario con: nombre, correo electrónico, asunto (lista desplegable)
+           y mensaje (área de texto).
+         - Cada campo con su etiqueta correctamente asociada.
+         - Opcional: etiquetas flotantes dentro de los campos.
+         - Botón de "Enviar".
+         - El formulario no debe ocupar todo el ancho en escritorio; céntralo.
+         Documentación: Forms > Overview  |  Forms > Form controls  |  Forms > Select
+                        Forms > Floating labels  |  Forms > Validation (reto)
+    -->
+
+
+  <section id="CONTACTO">
+    <div class="container">
+
+      <h2 class="display-5 text-center section-title">
+        Hablemos :33!!
+      </h2>
+
+      <p class="text-center text-secondary mb-4">
+        Puedes utilizar este formulario para ponerte en contacto conmigo :3
+      </p>
+
+      <form class="mx-auto" style="max-width: 700px;" action="#" method="post">
+
+        <div class="mb-3">
+          <label for="nombre" class="form-label">
+            Nombre
+          </label>
+
+          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name"
+            required>
+        </div>
+
+
+        <div class="mb-3">
+          <label for="correo" class="form-label">
+            Correo electrónico
+          </label>
+
+          <input type="email" class="form-control" id="correo" name="correo" placeholder="nombre@ejemplo.com"
+            autocomplete="email" required>
+        </div>
+
+
+        <div class="mb-3">
+          <label for="asunto" class="form-label">
+            Asunto
+          </label>
+
+          <select class="form-select" id="asunto" name="asunto" required>
+
+            <option value="" selected disabled>
+              Selecciona un asunto
+            </option>
+
+            <option value="proyecto">
+              Propuesta de proyecto
+            </option>
+
+            <option value="colaboracion">
+              Colaboración
+            </option>
+
+            <option value="consulta">
+              Consulta general
+            </option>
+
+          </select>
+        </div>
+
+
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">
+            Mensaje
+          </label>
+
+          <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje..."
+            required></textarea>
+        </div>
+
+
+        <button type="submit" class="btn btn-dark">
+          Enviar
+        </button>
+
+      </form>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- TODO 9: PIE DE PÁGINA                                        -->
+  <!-- ============================================================ -->
+  <!-- Requisitos:
+         - Fondo oscuro con texto claro.
+         - Enlaces a tus redes (GitHub, LinkedIn, correo).
+         - Texto de derechos: "© 2026 Tu Nombre".
+         Documentación: Utilities > Background  |  Utilities > Colors
+                        Utilities > Flex  |  (Iconos: https://icons.getbootstrap.com/)
+    -->
+
+
+  <footer class="bg-dark text-light py-4">
+    <div class="container text-center">
+
+      <p class="mb-2 fw-semibold">
+        SEPHIROTTHO
+      </p>
+
+      <div class="d-flex justify-content-center flex-wrap gap-3 mb-3">
+
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
+
+        <a href="#MAIL">
+          Correo
+        </a>
+
+      </div>
+
+      <p class="small text-secondary mb-0">
+        © 2026 Seph. Todos los derechos reservados.
+      </p>
+
+    </div>
+  </footer>
+
+</body>
+
+</html>
